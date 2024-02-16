@@ -1,0 +1,52 @@
+dataset: 'tumrgbd'
+project_name: 'Point_SLAM_tumrgbd'
+use_view_direction: False
+use_dynamic_radius: True
+model:
+  encode_rel_pos_in_col: False
+pointcloud:
+  radius_add_max: 0.08
+  radius_add_min: 0.02
+  nlist : 150
+tracking:
+  pgo_prune: 0.1
+  min_dist: 2
+  vis_freq: 50
+  ignore_edge_W: 20
+  ignore_edge_H: 20
+  separate_LR: False
+  const_speed_assumption: True
+  use_color_in_tracking: True
+  w_color_loss: 0.5
+  lr: 0.002     
+  pixels: 5000
+  iters: 200
+  vis_inside_freq: 200
+  sample_with_color_grad: True
+mapping:
+  segment_rot_cos: 0.87 #cosine between cameras to generate new segment if rot_trans strategy used
+  segment_rel_trans: 0.45 #camera translation threshold in cm to generate new segment if rot_trans strategy used
+  every_frame: 2
+  BA: False
+  vis_freq: 40
+  vis_inside_freq: 1000
+  ckpt_freq: 10000
+  keyframe_every: 5
+  mapping_window_size: 10
+  pixels: 10000
+  pixels_adding: 5000
+  pixels_based_on_color_grad: 1000
+  iters_first: 1500
+  geo_iter_first: 400
+  iters: 300
+rendering:
+  sample_near_pcl: False
+cam:  #NOTE: intrinsic is different per scene in TUM
+  H: 480 
+  W: 640 
+  fx: 517.3
+  fy: 516.5
+  cx: 318.6
+  cy: 255.3
+  png_depth_scale: 5000.0
+  crop_edge: 0

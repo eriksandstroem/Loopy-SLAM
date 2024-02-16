@@ -1,0 +1,5 @@
+inherit_from: configs/ScanNet/scannet.yaml
+config_path: configs/ScanNet/scene0025.yaml
+data:
+  input_folder: scene0025_02
+  output: /cluster/work/cvl/esandstroem/src/point_slam_loop/output/ScanNet/scene0025

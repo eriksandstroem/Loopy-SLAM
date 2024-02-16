@@ -1,0 +1,10 @@
+inherit_from: configs/ScanNet/scannet.yaml
+config_path: configs/ScanNet/scene0233.yaml
+data:
+  input_folder: scene0233_00
+  output: /cluster/work/cvl/esandstroem/src/point_slam_loop/output/ScanNet/scene0233
+cam: 
+  fx: 577.870605
+  fy: 577.870605
+  cx: 319.500000
+  cy: 239.500000

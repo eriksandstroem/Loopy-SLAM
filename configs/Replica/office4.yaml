@@ -1,0 +1,5 @@
+inherit_from: configs/Replica/replica.yaml
+config_path: configs/Replica/office4.yaml
+data:
+  input_folder: office4
+  output: /cluster/work/cvl/esandstroem/src/point_slam_loop/output/Replica/office4

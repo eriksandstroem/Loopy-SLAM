@@ -1,0 +1,53 @@
+dataset: 'scannet'
+project_name: 'Point_SLAM_scannet'
+use_view_direction: False
+use_dynamic_radius: True 
+model:
+  encode_exposure: True
+  encode_rel_pos_in_col: False
+  encode_viewd: False
+pointcloud:
+  radius_add_max: 0.08
+  radius_add_min: 0.02
+tracking:
+  vis_freq: 200
+  ignore_edge_W: 20
+  ignore_edge_H: 20
+  separate_LR: False
+  const_speed_assumption: True
+  w_color_loss: 0.5
+  lr: 0.0005      
+  pixels: 5000
+  iters: 100
+  sample_with_color_grad: True
+  depth_limit: False
+mapping:
+  every_frame: 5
+  BA: False
+  vis_freq: 40
+  geo_iter_ratio: 0.3
+  ckpt_freq: 10000
+  mapping_window_size: 20
+  keyframe_every: 10
+  pixels: 10000
+  pixels_adding: 6000
+  pixels_based_on_color_grad: 0
+  iters_first: 500
+  geo_iter_first: 200
+  iters: 300
+rendering:
+  sample_near_pcl: False
+  near_end_surface: 0.96
+  far_end_surface: 1.04
+pointcloud:
+  near_end_surface: 0.96
+  far_end_surface: 1.04
+cam: 
+  H: 480 
+  W: 640
+  fx: 577.590698
+  fy: 578.729797
+  cx: 318.905426
+  cy: 242.683609
+  png_depth_scale: 1000.
+  crop_edge: 10

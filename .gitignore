@@ -1,0 +1,7 @@
+/.vscode
+Datasets
+output
+segments
+refinement
+__pycache__
+cull_replica_mesh

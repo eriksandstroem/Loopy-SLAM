@@ -1,0 +1,13 @@
+inherit_from: configs/TUM_RGBD/tum.yaml
+config_path: configs/TUM_RGBD/freiburg3_office.yaml
+data:
+  input_folder: rgbd_dataset_freiburg3_long_office_household
+  output: /cluster/work/cvl/esandstroem/src/point_slam_loop/output/TUM_RGBD/freiburg3_long_office
+cam:  #intrinsic is different per scene in TUM, this cam does not have distortion
+  H: 480 
+  W: 640 
+  fx: 535.4
+  fy: 539.2
+  cx: 320.1
+  cy: 247.6
+  crop_edge: 8
