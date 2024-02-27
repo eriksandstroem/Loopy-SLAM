@@ -3,6 +3,7 @@
 <p align="center">
 
   <h1 align="center">Loopy-SLAM: Dense Neural SLAM with Loop Closures</h1>
+  <h1 align="center">[CVPR 2024]</h1>
   <p align="center">
     <a href="https://github.com/notchla"><strong>Lorenzo Liso*</strong></a>
     .
